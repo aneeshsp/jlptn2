@@ -27,8 +27,11 @@
     </header>
     <main>
         <section class="translation">
-            <h2>Translate</h2>
-            <div id="google_translate_element"></div>
+        <h2>Translate</h2>
+        <div id="google_translate_element"></div>
+    </section>
+        <section class="intro">
+            <p>Welcome to our website dedicated to providing resources for the JLPT N2 exam. Whether you're preparing for the test or simply looking to improve your Japanese language skills, you've come to the right place!</p>
         </section>
         <section class="intro">
             <p>Welcome to our website dedicated to providing resources for the JLPT N2 exam. Whether you're preparing for the test or simply looking to improve your Japanese language skills, you've come to the right place!</p>
@@ -36,7 +39,35 @@
         <section class="countdown">
             <h2>Upcoming Exam Countdown</h2>
             <div id="countdown-timer"></div>
-        </section> <!-- This closing tag was missing -->
+        </sectio
+    <script>
+        // Calculate and display the countdown timer
+        const countdownDate = new Date('December 2, 2023 00:00:00').getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const timeRemaining = countdownDate - now;
+
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown-timer').innerHTML =
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById('countdown-timer').innerHTML = 'Exam day has arrived!';
+            }
+        };
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial update
+        updateCountdown();
+    </script>
+        </section>
         <section class="featured-resources">
             <div class="resource">
                 <h3>Grammar Practice</h3>
