@@ -4,6 +4,14 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
+.translation {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
