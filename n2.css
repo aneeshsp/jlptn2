@@ -96,17 +96,17 @@ main {
 
 .countdown {
     text-align: center;
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: #f7f7f7;
 }
 
 .countdown h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 #countdown-timer {
-    font-size: 36px;
+    font-size: 24px;
     color: #333333;
     font-weight: bold;
 }
