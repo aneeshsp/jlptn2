@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="n2.css">
 </head>
 <body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'id,tl,vi,ko,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <header>
         <h1>JLPT N2 Exam Resources</h1>
         <nav>
@@ -20,6 +26,10 @@
         </nav>
     </header>
     <main>
+        <section class="translation">
+        <h2>Translate</h2>
+        <div id="google_translate_element"></div>
+    </section>
         <section class="intro">
             <p>Welcome to our website dedicated to providing resources for the JLPT N2 exam. Whether you're preparing for the test or simply looking to improve your Japanese language skills, you've come to the right place!</p>
         </section>
@@ -29,10 +39,7 @@
         <section class="countdown">
             <h2>Upcoming Exam Countdown</h2>
             <div id="countdown-timer"></div>
-        </section>
-    <footer>
-        <!-- ... footer content ... -->
-    </footer>
+        </sectio
     <script>
         // Calculate and display the countdown timer
         const countdownDate = new Date('December 2, 2023 00:00:00').getTime();
