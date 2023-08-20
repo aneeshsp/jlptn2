@@ -4,6 +4,31 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
+/* Default styles for light mode */
+body {
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Styles for dark mode */
+.dark-mode body {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
+/* Style for the dark mode toggle button */
+.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
 .translation {
     margin: 20px;
     padding: 20px;
