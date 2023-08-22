@@ -140,6 +140,29 @@ footer {
     color: #fff;
 }
 
+/* Regular navigation styling */
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-container li {
+    margin: 0 15px;
+}
+
+/* Hamburger icon styling */
+.hamburger-icon {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+}
+
+
+
+
+
 /* Media query for screens 600px and below */
 @media (max-width: 600px) {
     header h1 {
@@ -152,5 +175,13 @@ footer {
 
     .featured-resources {
         grid-template-columns: 1fr; /* Change to single column */
+    }
+
+        .nav-container ul {
+        display: none; /* Hide regular navigation on smaller screens */
+    }
+
+    .hamburger-icon {
+        display: block; /* Show hamburger icon on smaller screens */
     }
 }
