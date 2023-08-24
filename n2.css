@@ -152,6 +152,27 @@ footer {
     cursor: pointer;
 }
 
+/* Color Variations */
+.intro {
+    background-color: #ffcc00; /* Yellow */
+}
+
+.featured-resources {
+    background-color: #e0e0e0; /* Light Gray */
+}
+
+.countdown {
+    background-color: #d1ecf1; /* Light Blue */
+}
+
+.resource {
+    background-color: #f0e68c; /* Khaki */
+}
+
+footer {
+    background-color: #333333; /* Dark Gray */
+}
+
 @media (max-width: 600px) {
     header h1 {
         font-size: 24px;
@@ -177,5 +198,26 @@ footer {
         color: #ffffff;
         padding: 5px;
         border-radius: 5px;
+    }
+
+    /* Color Variations for Small Screens */
+    .intro {
+        background-color: #fffacd; /* LemonChiffon */
+    }
+
+    .featured-resources {
+        background-color: #f0f0f0; /* Lighter Gray */
+    }
+
+    .countdown {
+        background-color: #f0ffff; /* Azure */
+    }
+
+    .resource {
+        background-color: #fafad2; /* LightGoldenRodYellow */
+    }
+
+    footer {
+        background-color: #444444; /* Darker Gray */
     }
 }
