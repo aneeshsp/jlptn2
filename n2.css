@@ -6,20 +6,20 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333333;
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333333; /* Dark gray text */
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .dark-mode body {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #333333; /* Dark gray background */
+    color: #ffffff; /* White text */
 }
 
 .dark-mode button {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #333333; /* Dark gray button */
+    color: #ffffff; /* White button text */
     border: none;
     cursor: pointer;
     padding: 5px 10px;
@@ -30,9 +30,9 @@ body {
 .translation {
     margin: 20px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Lighter gray background */
+    border: 1px solid #ddd; /* Gray border */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 body {
@@ -40,8 +40,8 @@ body {
 }
 
 header {
-    background-color: #000000;
-    color: #fff;
+    background-color: #6b52ae; /* Purple header */
+    color: #fff; /* White header text */
     padding: 10px;
     text-align: center;
 }
@@ -58,7 +58,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* White nav link text */
     font-weight: bold;
     padding: 10px;
     border-radius: 10px;
@@ -66,16 +66,16 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ff0000;
+    background-color: #ffcc00; /* Yellow nav link hover */
 }
 
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White main content */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .intro p {
@@ -92,7 +92,6 @@ main {
 .countdown {
     text-align: center;
     padding: 10px 0;
-    background-color: #f7f7f7;
 }
 
 .countdown h2 {
@@ -102,15 +101,15 @@ main {
 
 #countdown-timer {
     font-size: 24px;
-    color: #333333;
+    color: #333333; /* Dark gray timer text */
     font-weight: bold;
 }
 
 .resource {
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #f0e68c; /* Light yellow resource background */
     border-radius: 10px;
-    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1);
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1); /* Subtle shadow */
 }
 
 .resource h3 {
@@ -124,15 +123,15 @@ main {
 .resource a {
     display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: #6b52ae; /* Purple resource link text */
     font-weight: bold;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #000000;
-    color: #fff;
+    background-color: #6b52ae; /* Purple footer */
+    color: #fff; /* White footer text */
 }
 
 .nav-container ul {
@@ -154,31 +153,31 @@ footer {
 
 /* Color Variations */
 .intro {
-    background-color: #ffcc00; /* Yellow */
+    background-color: #ffcc00; /* Yellow intro background */
 }
 
 .featured-resources {
-    background-color: #e0e0e0; /* Light Gray */
+    background-color: #e0e0e0; /* Light gray featured resources background */
 }
 
 .countdown {
-    background-color: #d1ecf1; /* Light Blue */
+    background-color: #d1ecf1; /* Light blue countdown background */
 }
 
 .resource {
-    background-color: #f0e68c; /* Khaki */
+    background-color: #f0e68c; /* Light yellow resource background */
 }
 
 footer {
-    background-color: #333333; /* Dark Gray */
+    background-color: #6b52ae; /* Purple footer */
 }
 
 @media (max-width: 600px) {
     header h1 {
         font-size: 24px;
         font-family: 'Sawarabi Mincho', serif;
-        color: #ff69b4;
-        text-shadow: -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000;
+        color: #ff69b4; /* Pink header text for small screens */
+        text-shadow: -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000; /* Shadow effect for header text */
     }
 
     nav li {
@@ -195,29 +194,30 @@ footer {
 
     .hamburger-icon {
         display: block;
-        color: #ffffff;
+        color: #ffffff; /* White hamburger icon */
         padding: 5px;
         border-radius: 5px;
     }
 
     /* Color Variations for Small Screens */
     .intro {
-        background-color: #fffacd; /* LemonChiffon */
+        background-color: #fffacd; /* LemonChiffon intro background for small screens */
     }
 
     .featured-resources {
-        background-color: #f0f0f0; /* Lighter Gray */
+        background-color: #f0f0f0; /* Lighter gray featured resources background for small screens */
     }
 
     .countdown {
-        background-color: #f0ffff; /* Azure */
+        background-color: #f0ffff; /* Azure countdown background for small screens */
     }
 
     .resource {
-        background-color: #fafad2; /* LightGoldenRodYellow */
+        background-color: #fafad2; /* LightGoldenRodYellow resource background for small screens */
     }
 
     footer {
-        background-color: #444444; /* Darker Gray */
-    }
+        background-color: #444444; /* Darker gray footer for small screens */
+        color:#ffffff; /* White footer text for small screens*/
+        
 }
