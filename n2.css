@@ -2,24 +2,26 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&display=swap');
 
 /* Reset some default browser styles */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
 /* Default styles for light mode */
 body {
-    background-color: #f5f5f5;
-    /* Light gray background */
+    background-color: #ffffff;
     color: #333333;
     transition: background-color 0.3s, color 0.3s;
+    /* Use Noto Sans JP as the default font */
     font-family: 'Noto Sans JP', sans-serif;
+    /* Use a cherry blossom background image */
+    background-image: url('https://images.unsplash.com/photo-1523309375635-9c27ffb02a5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
+    /* Adjust the opacity and blend mode of the background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
 }
 
 /* Styles for dark mode */
@@ -61,8 +63,7 @@ header {
 
 nav ul {
     list-style: none;
-    text-align: center;
-    /* Center the navigation items */
+    text-align: center; /* Center the navigation items */
 }
 
 nav li {
@@ -89,12 +90,14 @@ main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    /* Use white as the main background color */
-    background-color: #ffffff;
-    border-radius:
-        10px;
-    box-shadow:
-        0px 0px 10px rgba(0, 0, 0, 0.1);
+     /* Use white as the main background color */
+     background-color:#ffffff; 
+     border-radius:
+     10px; box-shadow:
+     0px
+     0px
+     10px
+     rgba(0, 0, 0, 0.1);
 }
 
 .intro p {
@@ -103,8 +106,7 @@ main {
 
 .featured-resources {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 20px;
     margin-top: 20px;
 }
@@ -130,7 +132,7 @@ main {
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, .1);
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1);
 }
 
 .resource h3 {
@@ -151,9 +153,9 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    /* Use black as the footer background color */
-    background-color: #000000;
-    color: #fff;
+     /* Use black as the footer background color */
+     background-color:#000000; 
+     color:#fff; 
 }
 
 /* Regular navigation styling */
@@ -171,8 +173,7 @@ footer {
 
 /* Hamburger icon styling */
 .hamburger-icon {
-    display: none;
-    /* Hide by default on larger screens */
+    display: none; /* Hide by default on larger screens */
     cursor: pointer;
 }
 
@@ -184,44 +185,168 @@ footer {
 @media (max-width: 600px) {
     header h1 {
         font-size: 24px;
-        font-family: 'Sawarabi Mincho', serif;
-        color: #ff69b4;
-        text-shadow: -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000;
-    }
+        /* Use Sawarabi Mincho as the heading font */
+        font-family:'Sawarabi Mincho', serif; 
+        /* Use pink as the heading color */
+        color:#ff69b4; 
+        /* Add some text shadow for contrast */
+        text-shadow:
+        -1px
+        -1px
+        2px
+        #000000,
+         1px
+         -1px
+         2px
+         #000000,
+         -1px
+         1px
+         2px
+         #000000,
+         1px
+         1px
+         2px
+         #000000; 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
 
-    .nav-container ul {
-        display: none;
-    }
+        
+        
 
+        
+        
 
+        
+        
 
+        
+        
 
+        
+        
 
-    nav li {
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+
+nav li {
         margin-right: 10px;
     }
 
     .featured-resources {
-        grid-template-columns: 1fr;
-        /* Change to single column */
+        grid-template-columns: 1fr; /* Change to single column */
     }
 
-    .nav-container ul {
-        display: none;
-        /* Hide regular navigation on smaller screens */
+        .nav-container ul {
+        display: none; /* Hide regular navigation on smaller screens */
     }
 
     .hamburger-icon {
-        display: block;
-        /* Show hamburger icon on smaller screens */
+        display: block; /* Show hamburger icon on smaller screens */
         /* Use white as the icon color */
-        color: #ffffff;
+        color:#ffffff; 
         /* Add some padding and border radius for the icon */
         padding:
-            5px;
+        5px; 
         border-radius:
-            5px;
-
-
-    }
+        5px; 
+        
+    
 }
