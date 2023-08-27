@@ -1,25 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&display=swap');
 
+/* Define color variables */
+
+:root {
+    --blue: #2196f3; /* Blue */
+    --light-blue: #64b5f6; /* Lighter blue */
+    --dark-blue: #1976d2; /* Darker blue */
+    --white: #ffffff; /* White */
+    --black: #000000; /* Black */
+    --gray: #333333; /* Dark gray */
+    --light-gray: #f5f5f5; /* Light gray */
+}
+
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #f5f5f5; /* Light gray background */
-    color: #333333; /* Dark gray text */
+    background-color: var(--light-gray); /* Use color variable */
+    color: var(--gray); /* Use color variable */
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .dark-mode body {
-    background-color: #333333; /* Dark gray background */
-    color: #ffffff; /* White text */
+    background-color: var(--gray); /* Use color variable */
+    color: var(--white); /* Use color variable */
 }
 
 .dark-mode button {
-    background-color: #333333; /* Dark gray button */
-    color: #ffffff; /* White button text */
+    background-color: var(--gray); /* Use color variable */
+    color: var(--white); /* Use color variable */
     border: none;
     cursor: pointer;
     padding: 5px 10px;
@@ -30,9 +42,9 @@ body {
 .translation {
     margin: 20px;
     padding: 20px;
-    background-color: #f9f9f9; /* Lighter gray background */
-    border: 1px solid #ddd; /* Gray border */
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -40,8 +52,8 @@ body {
 }
 
 header {
-    background-color: #009688; /* Teal header */
-    color: #fff; /* White header text */
+    background-color: var(--blue); /* Use color variable */
+    color: var(--white); /* Use color variable */
     padding: 10px;
     text-align: center;
 }
@@ -58,7 +70,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* White nav link text */
+    color: var(--white); /* Use color variable */
     font-weight: bold;
     padding: 10px;
     border-radius: 10px;
@@ -66,16 +78,16 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #4db6ac; /* Lighter teal nav link hover */
+    background-color: var(--light-blue); /* Use color variable */
 }
 
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff; /* White main content */
+    background-color: var(--white); /* Use color variable */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .intro p {
@@ -83,17 +95,16 @@ main {
 }
 
 .featured-resources {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: center; /* Center flex items horizontally */
+    align-items: center; /* Center flex items vertically */
     margin-top: 20px;
-    background-color: #e0e0e0; /* Light gray featured resources background */
 }
 
 .countdown {
     text-align: center;
     padding: 10px 0;
-    background-color: #b2dfdb; /* Lighter teal countdown background */
 }
 
 .countdown h2 {
@@ -103,15 +114,15 @@ main {
 
 #countdown-timer {
     font-size: 24px;
-    color: #333333; /* Dark gray timer text */
+    color: var(--gray); /* Use color variable */
     font-weight: bold;
 }
 
 .resource {
     padding: 15px;
-    background-color: #e0f2f1; /* Light teal resource background */
+    background-color: var(--light-blue); /* Use color variable */
     border-radius: 10px;
-    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1); /* Subtle shadow */
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1);
 }
 
 .resource h3 {
@@ -125,67 +136,92 @@ main {
 .resource a {
     display: inline-block;
     text-decoration: none;
-    color: #009688; /* Teal resource link text */
+    color: var(--blue); /* Use color variable */
     font-weight: bold;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #009688; /* Teal footer */
-    color: #fff; /* White footer text */
+    background-color: var(--blue); /* Use color variable */
+    color: var(--white); /* Use color variable */
 }
 
 .nav-container ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center flex items horizontally */
+    align-items: center; /* Center flex items vertically */
     padding: 0;
 }
 
 .nav-container li {
-    margin: 0 15px;
+    margin-right: 15px; 
 }
 
 .hamburger-icon {
-    display: none;
-    cursor: pointer;
+    display: none; 
 }
 
-/* Color Variations */
-.intro {
-    background-color: #fffacd; /* LemonChiffon intro background for small screens */
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: var(--blue); /* Use color variable */
+    color: var(--white); /* Use color variable */
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px; /* Add border radius to match nav links */
 }
 
-.countdown {
-    background-color: #f0ffff; /* Azure countdown background for small screens */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative; 
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 24px;
-        font-family: 'Sawarabi Mincho', serif;
-        color: #ff69b4; /* Pink header text for small screens */
-        text-shadow: -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000; /* Shadow effect for header text */
-    }
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none; 
+}
 
-    nav li {
-        margin-right: 10px;
-    }
+/* Links inside the dropdown */
+.dropdown-content a {
+    
+}
 
-    .featured-resources {
-        grid-template-columns: 1fr;
-    }
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:#ddd;}
 
-    .nav-container ul {
-        display: none;
-    }
+/* Show the dropdown menu on hover (optional) */
+.dropdown:hover .dropdown-content {
 
-    .hamburger-icon {
-        display: block;
-        color: #ffffff; /* White hamburger icon */
-        padding: 5px;
-        border-radius: 5px;
-    }
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown (optional) */
+
+@media (max-width: 600px) { /* Media query for small screens */
+
+   header h1 {
+        font-size: calc(1rem + 2vw); /* Use relative unit and calc function to scale font size with viewport width */
+        font-family:'Sawarabi Mincho', serif; 
+        color:#ffffff; /* Remove pink header text for small screens and use white instead for consistency */ 
+        text-shadow:none; /* Remove shadow effect for header text for simplicity */ 
+   }
+
+   nav li {
+        margin-right:auto; /* Use auto margin to create space between nav links and hamburger icon */ 
+   }
+
+   .featured-resources {
+        flex-direction : column ; /* Change flex direction to column for small screens */ 
+   }
+
+   .nav-container ul {
+        display:none ; /* Hide nav links by default for small screens */ 
+   }
+
+   .hamburger-icon {
+        display:block ; /* Show hamburger icon for small screens */ 
+        color:#ffffff ; /* Use white hamburger icon to match nav links */ 
+        padding :5 px ; 
+        border-radius :5 px ; 
+   }
 }
