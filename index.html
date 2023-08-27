@@ -30,11 +30,39 @@
     <div class="nav-container">
         <ul>
             <li><a href="index.html">TOP</a></li>
-            <li><a href="grammar.html">Grammar</a></li>
-            <li><a href="vocabulary.html">Vocabulary</a></li>
-            <li><a href="reading.html">Reading Comprehension</a></li>
-            <li><a href="listening.html">Listening Practice</a></li>
-            <li><div id="google_translate_element"></div></li>
+            <!-- Add a div element with class="dropdown" around each main title that has a dropdown menu -->
+            <div class="dropdown">
+                <!-- Add a span element with class="dropbtn" for each main title that has a dropdown menu -->
+                <li><span class="dropbtn">Study Material</span></li>
+                <!-- Add a div element with class="dropdown-content" for each dropdown menu -->
+                <div class="dropdown-content">
+                    <!-- Add an a element for each dropdown item -->
+                    <a href="#">Grammar</a>
+                    <a href="#">Vocabulary</a>
+                    <a href="#">Kanji</a>
+                    <a href="#">Reading</a>
+                    <a href="#">Listening</a>
+
+                </div>
+            </div>
+            <div class="dropdown">
+                <li><span class="dropbtn">Recomeendations</span></li>
+                <div class="dropdown-content">
+                    <a href="#">Books</a>
+                    <a href="#">Apps</a>
+                    <a href="#">Youtube Channels</a>
+                    <a href="#">Podcasts</a>
+                    <a href="#">Websites</a>
+                </div>
+            </div>
+            <div class="Important Dates">
+                <li><span class="dropbtn">Reading Comprehension</span></li>
+                <div class="dropdown-content">
+                    <a href="#">Application Dates</a>
+                    <a href="#">Exam Date</a>
+                    <a href="#">Resulr Date</a>
+                </div>
+            </div>
         </ul>
         <div class="hamburger-icon">&#9776;</div>
     </div>
@@ -65,7 +93,7 @@
             const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
             document.getElementById('countdown-timer').innerHTML =
-                `${days}d`;
+                `${days}days`;
         } else {
             document.getElementById('countdown-timer').innerHTML = 'Exam day has arrived!';
         }
@@ -89,6 +117,11 @@
                 <h3>Vocabulary Building</h3>
                 <p>Expand your vocabulary through our comprehensive list of N2 vocabulary words and quizzes.</p>
                 <a href="vocabulary.html">Explore Vocabulary Resources →</a>
+            </div>
+			            <div class="resource">
+                <h3>Kanji Practice</h3>
+                <p>Improve your Kanji knowledge.</p>
+                <a href="listening.html">Explore Listening Resources &rarr;</a>
             </div>
             <div class="resource">
                 <h3>Reading Practice</h3>
