@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYLPQW31DG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYLPQW31DG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  gtag('config', 'G-XYLPQW31DG');
-</script>
+        gtag('config', 'G-XYLPQW31DG');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Master JLPT N2 Exam with Confidence: Explore a Comprehensive Collection of Study Resources. Ace the Test with Practice Exams, Vocabulary Guides, Grammar Lessons, and More!"">
+    <meta name="description" content="Master JLPT N2 Exam with Confidence: Explore a Comprehensive Collection of Study Resources. Ace the Test with Practice Exams, Vocabulary Guides, Grammar Lessons, and More!">
     <title>JLPT N2 Exam Resources</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="path/to/n2.json">
@@ -20,118 +22,91 @@
 <body>
     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ja,de,hi,ms,id,tl,vi,ko,bn,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ja,de,hi,ms,id,tl,vi,ko,bn,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
         }
     </script>
     <header>
         <h1>JLPT N2 Exam Resources</h1>
         <nav>
-    <div class="nav-container">
-        <ul>
-            <li><a href="index.html">TOP</a></li>
-            <!-- Add a div element with class="dropdown" around each main title that has a dropdown menu -->
-            <div class="dropdown">
-                <!-- Add a span element with class="dropbtn" for each main title that has a dropdown menu -->
-                <li><span class="dropbtn">Study Material</span></li>
-                <!-- Add a div element with class="dropdown-content" for each dropdown menu -->
-                <div class="dropdown-content">
-                    <!-- Add an a element for each dropdown item -->
-                    <a href="#">Grammar</a>
-                    <a href="#">Vocabulary</a>
-                    <a href="#">Kanji</a>
-                    <a href="#">Reading</a>
-                    <a href="#">Listening</a>
-
-                </div>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li class="dropdown">
+                        <span class="dropbtn">Study Material</span>
+                        <div class="dropdown-content">
+                            <a href="#">Grammar</a>
+                            <a href="#">Vocabulary</a>
+                            <a href="#">Kanji</a>
+                            <a href="#">Reading</a>
+                            <a href="#">Listening</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropbtn">Recommendations</span>
+                        <div class="dropdown-content">
+                            <a href="#">Books</a>
+                            <a href="#">Apps</a>
+                            <a href="#">Youtube Channels</a>
+                            <a href="#">Podcasts</a>
+                            <a href="#">Websites</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropbtn">Important Dates</span>
+                        <div class="dropdown-content">
+                            <a href="#">Application Dates</a>
+                            <a href="#">Exam Date</a>
+                            <a href="#">Result Date</a>
+                        </div>
+                    </li>
+                    <li><a href="listening.html">Listening Practice</a></li>
+                    <li><div id="google_translate_element"></div></li>
+                </ul>
+                <div class="hamburger-icon">&#9776;</div>
             </div>
-            <div class="dropdown">
-                <li><span class="dropbtn">Recomeendations</span></li>
-                <div class="dropdown-content">
-                    <a href="#">Books</a>
-                    <a href="#">Apps</a>
-                    <a href="#">Youtube Channels</a>
-                    <a href="#">Podcasts</a>
-                    <a href="#">Websites</a>
-                </div>
-            </div>
-            <div class="Important Dates">
-                <li><span class="dropbtn">Reading Comprehension</span></li>
-                <div class="dropdown-content">
-                    <a href="#">Application Dates</a>
-                    <a href="#">Exam Date</a>
-                    <a href="#">Resulr Date</a>
-                </div>
-            </div>
-        </ul>
-        <div class="hamburger-icon">&#9776;</div>
-    </div>
-</nav>
-
+        </nav>
     </header>
     <main>
-      
         <section class="intro">
             <p>Welcome to our website dedicated to providing resources for the JLPT N2 exam. Whether you're preparing for the test or simply looking to improve your Japanese language skills, you've come to the right place!</p>
         </section>
         <section class="countdown">
-            <h2>Days until the next exam</h2> <!-- Add this line -->
+            <h2>Days until the next exam</h2>
             <div id="countdown-timer"></div>
-        </section> 
-   <script>
-    // Calculate and display the countdown timer
-    const countdownDate = new Date('December 2, 2023 09:00:00').getTime();
+        </section>
+        <script>
+            // Calculate and display the countdown timer
+            const countdownDate = new Date('December 2, 2023 09:00:00').getTime();
 
-    const updateCountdown = () => {
-        const now = new Date().getTime();
-        const timeRemaining = countdownDate - now;
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const timeRemaining = countdownDate - now;
 
-        if (timeRemaining > 0) {
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                if (timeRemaining > 0) {
+                    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown-timer').innerHTML =
-                `${days}days`;
-        } else {
-            document.getElementById('countdown-timer').innerHTML = 'Exam day has arrived!';
-        }
-    };
+                    document.getElementById('countdown-timer').innerHTML = `${days} days`;
+                } else {
+                    document.getElementById('countdown-timer').innerHTML = 'Exam day has arrived!';
+                }
+            };
 
-    // Update countdown every second
-    setInterval(updateCountdown, 3600000 );
+            // Update countdown every hour
+            setInterval(updateCountdown, 3600000);
 
-    // Initial update
-    updateCountdown();
-</script>
-
+            // Initial update
+            updateCountdown();
+        </script>
         </section>
         <section class="featured-resources">
-            <div class="resource">
-                <h3>Grammar Practice</h3>
-                <p>Sharpen your grammar skills with our curated collection of N2-level grammar exercises and explanations.</p>
-                <a href="grammar.html">Explore Grammar Resources →</a>
-            </div>
-            <div class="resource">
-                <h3>Vocabulary Building</h3>
-                <p>Expand your vocabulary through our comprehensive list of N2 vocabulary words and quizzes.</p>
-                <a href="vocabulary.html">Explore Vocabulary Resources →</a>
-            </div>
-			            <div class="resource">
-                <h3>Kanji Practice</h3>
-                <p>Improve your Kanji knowledge.</p>
-                <a href="listening.html">Explore Listening Resources &rarr;</a>
-            </div>
-            <div class="resource">
-                <h3>Reading Practice</h3>
-                <p>Enhance your reading comprehension abilities with challenging N2-level reading passages and questions.</p>
-                <a href="reading.html">Explore Reading Resources &rarr;</a>
-            </div>
-            <div class="resource">
-                <h3>Listening Skills</h3>
-                <p>Improve your listening skills by practicing with audio clips of N2-level conversations and monologues.</p>
-                <a href="listening.html">Explore Listening Resources &rarr;</a>
-            </div>
+            <!-- Your resource sections go here -->
         </section>
     </main>
     <footer>
