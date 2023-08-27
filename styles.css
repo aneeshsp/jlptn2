@@ -119,9 +119,9 @@ featured-resources {
 
 .resource {
     padding: 15px;
-    background-color: #e0f2f1; /* Light teal resource background */
+    background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1); /* Subtle shadow */
+    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1);
 }
 
 .resource h3 {
@@ -135,7 +135,7 @@ featured-resources {
 .resource a {
     display: inline-block;
     text-decoration: none;
-    color: #009688; /* Teal resource link text */
+    color: #333;
     font-weight: bold;
 }
 
