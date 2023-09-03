@@ -3,13 +3,10 @@
 /* Define color variables */
 
 :root {
-    --blue: #2196f3; /* Blue */
-    --light-blue: #64b5f6; /* Lighter blue */
-    --dark-blue: #1976d2; /* Darker blue */
-    --white: #ffffff; /* White */
-    --black: #000000; /* Black */
-    --gray: #333333; /* Dark gray */
-    --light-gray: #f5f5f5; /* Light gray */
+    --primary-color: #2196f3; /* Blue */
+    --secondary-color: #64b5f6; /* Lighter blue */
+    --background-color: #f5f5f5; /* Light gray */
+    --text-color: #333333; /* Dark gray */
 }
 
 body, h1, h2, h3, p, ul, li {
@@ -18,212 +15,122 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    background-color: var(--light-gray); /* Use color variable */
-    color: var(--gray); /* Use color variable */
+    background-color: var(--background-color);
+    color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .dark-mode body {
-    background-color: var(--gray); /* Use color variable */
-    color: var(--white); /* Use color variable */
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
-.dark-mode button {
-    background-color: var(--gray); /* Use color variable */
-    color: var(--white); /* Use color variable */
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.translation {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-body {
-    line-height: 1.6;
-}
-
+/* Updated header styles for a modern look */
 header {
-    background-color: var(--blue); /* Use color variable */
-    color: var(--white); /* Use color variable */
-    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 20px 0;
     text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    font-family: 'Sawarabi Mincho', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Updated navigation styles */
+nav {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 nav li {
-    display: inline-block;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--white); /* Use color variable */
+    color: var(--background-color);
     font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background-color: var(--light-blue); /* Use color variable */
+    background-color: var(--secondary-color);
 }
 
+/* Updated main content container styles */
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--white); /* Use color variable */
+    background-color: var(--background-color);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.intro p {
-    margin-bottom: 20px;
-}
-
-featured-resources {
+/* Updated featured resources section styles */
+.featured-resources {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.countdown {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.countdown h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-#countdown-timer {
-    font-size: 24px;
-    color: #333333; /* Dark gray timer text */
-    font-weight: bold;
-}
-
-.resource {
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: inset -5px -5px 10px rgba(0,0,0,.1);
-}
-
-.resource h3 {
-    margin-bottom: 10px;
-}
-
-.resource p {
-    margin-bottom: 15px;
-}
-
-.resource a {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
+/* Updated footer styles for a modern look */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: var(--blue); /* Use color variable */
-    color: var(--white); /* Use color variable */
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
-.nav-container ul {
-    list-style: none;
-    display: flex; /* Use flexbox layout */
-    justify-content: center; /* Center flex items horizontally */
-    align-items: center; /* Center flex items vertically */
-    padding: 0;
-}
+/* Updated hamburger menu icon styles for small screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+        color: var(--primary-color);
+        text-shadow: none;
+    }
 
-.nav-container li {
-    margin-right: 5px; 
-}
+    nav {
+        padding: 10px 0;
+    }
 
-.hamburger-icon {
-    display: none; 
-}
+    nav li {
+        margin-right: 0;
+    }
 
-/* Style The Dropdown Button */
-.dropbtn {
-    background-color: var(--blue); /* Use color variable */
-    color: var(--white); /* Use color variable */
-    padding: 8px;
-    font-size: 12px;
-    border-radius: 10px; /* Add border radius to match nav links */
-}
+    nav a {
+        padding: 10px;
+    }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative; 
-}
+    .featured-resources {
+        flex-direction: column;
+    }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none; 
-}
+    nav ul {
+        display: none;
+    }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black; /* Black text color */
-    padding: 5px 8px; /* Padding around text */
-    text-decoration: none; /* No underline */
-    display: block; /* Block display */
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color:#ddd;}
-
-/* Show the dropdown menu on hover (optional) */
-.dropdown:hover .dropdown-content {
-    display: block; /* Display the dropdown content */
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown (optional) */
-
-@media (max-width: 600px) { /* Media query for small screens */
-
-   header h1 {
-        font-size: calc(1rem + 2vw); /* Use relative unit and calc function to scale font size with viewport width */
-        font-family:'Sawarabi Mincho', serif; 
-        color:#ffffff; /* Remove pink header text for small screens and use white instead for consistency */ 
-        text-shadow:none; /* Remove shadow effect for header text for simplicity */ 
-   }
-
-   nav li {
-        margin-right:auto; /* Use auto margin to create space between nav links and hamburger icon */ 
-   }
-
-   .featured-resources {
-        flex-direction : column ; /* Change flex direction to column for small screens */ 
-   }
-
-   .nav-container ul {
-        display:none ; /* Hide nav links by default for small screens */ 
-   }
-
-   .hamburger-icon {
-        display:block ; /* Show hamburger icon for small screens */ 
-        color:#ffffff ; /* Use white hamburger icon to match nav links */ 
-        padding :5 px ; 
-        border-radius :5 px ; 
-   }
+    .hamburger-icon {
+        display: block;
+        color: var(--background-color);
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 5px;
+    }
 }
