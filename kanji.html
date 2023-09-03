@@ -14,6 +14,7 @@
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="kanji.js"></script>
     <header>
         <h1>JLPT N2 Kanji Resources</h1>
         <nav>
@@ -24,10 +25,12 @@
                 <li><a href="reading.html">Reading Comprehension</a></li>
                 <li><a href="listening.html">Listening Practice</a></li>
                 <li><div id="google_translate_element"></div></li>
+                <li><button id="toggle-resources-button">Toggle Resources</button></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
+
 
     <section class="featured-resources">
         <div class="resource">
@@ -45,11 +48,11 @@
             <h3>Kanji Practice</h3>
             <p>Practice your kanji skills with these resources:</p>
             <ul>
-                <li><a href="https://www.jlpt.jp/samples/pdf/N2-kanji.pdf" target="_blank">Kanji Practice PDF</a></li>
-                <li><a href="https://jlpt.u-biq.org/2k1.html" target="_blank">Kanji Practice </a></li>
-                <li><a href="https://www.nihongo-pro.com/jp/free-jlpt-n2-quizzes#kanji" target="_blank">Nihongo-Pro Quizzes</a></li>
-                <li><a href="https://www.jpdrills.com/practice/Japanese/42/JLPT_N2_Kanji/Practice" target="_blank">JPDrills Practice</a></li>
-                <li><a href="https://japanesetest4you.com/category/jlpt-n2/jlpt-n2-kanji-test/" target="_blank">Kanji Tests</a></li>
+                <li><a  class="kanji-link" href="https://www.jlpt.jp/samples/pdf/N2-kanji.pdf" target="_blank">Kanji Practice PDF</a></li>
+                <li><a  class="kanji-link" href="https://jlpt.u-biq.org/2k1.html" target="_blank">Kanji Practice </a></li>
+                <li><a  class="kanji-link" href="https://www.nihongo-pro.com/jp/free-jlpt-n2-quizzes#kanji" target="_blank">Nihongo-Pro Quizzes</a></li>
+                <li><a  class="kanji-link" href="https://www.jpdrills.com/practice/Japanese/42/JLPT_N2_Kanji/Practice" target="_blank">JPDrills Practice</a></li>
+                <li><a  class="kanji-link" href="https://japanesetest4you.com/category/jlpt-n2/jlpt-n2-kanji-test/" target="_blank">Kanji Tests</a></li>
             </ul>
         </div>
 
@@ -59,7 +62,7 @@
             <h3>Kanji Video Lesson</h3>
             <p>Watch this video lesson on JLPT N2 kanji by Japanese Ammo with Misa:</p> 
             <!-- embed the YouTube video using the first resource link -->
-            <iframe width="560" height="315" src="^1^" frameborder="0" allowfullscreen></iframe> 
+<iframe id="kanjiVideo" width="560" height="315" src="^1^" frameborder="0" allowfullscreen></iframe>
         </div>
 
     </section>
