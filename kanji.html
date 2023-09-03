@@ -5,7 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JLPT N2 Kanji Resources</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="pages.css"> 
+    <link rel="stylesheet" href="pages.css">
+    <style>
+        /* Add CSS styles for improved aesthetics */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .resource {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .resource h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .resource p {
+            font-size: 1.2rem;
+        }
+
+        .resource ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .resource ul li {
+            margin-bottom: 5px;
+        }
+
+        .resource a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Add CSS styles for a toggle button */
+        #toggle-resources-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #toggle-resources-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <script type="text/javascript">
@@ -14,7 +111,6 @@
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="kanji.js"></script>
     <header>
         <h1>JLPT N2 Kanji Resources</h1>
         <nav>
@@ -25,12 +121,10 @@
                 <li><a href="reading.html">Reading Comprehension</a></li>
                 <li><a href="listening.html">Listening Practice</a></li>
                 <li><div id="google_translate_element"></div></li>
-                <li><button id="toggle-resources-button">Toggle Resources</button></li>
             </ul>
         </nav>
     </header>
-    <main id="main-content">
-
+    <main>
 
     <section class="featured-resources">
         <div class="resource">
@@ -48,11 +142,11 @@
             <h3>Kanji Practice</h3>
             <p>Practice your kanji skills with these resources:</p>
             <ul>
-                <li><a  class="kanji-link" href="https://www.jlpt.jp/samples/pdf/N2-kanji.pdf" target="_blank">Kanji Practice PDF</a></li>
-                <li><a  class="kanji-link" href="https://jlpt.u-biq.org/2k1.html" target="_blank">Kanji Practice </a></li>
-                <li><a  class="kanji-link" href="https://www.nihongo-pro.com/jp/free-jlpt-n2-quizzes#kanji" target="_blank">Nihongo-Pro Quizzes</a></li>
-                <li><a  class="kanji-link" href="https://www.jpdrills.com/practice/Japanese/42/JLPT_N2_Kanji/Practice" target="_blank">JPDrills Practice</a></li>
-                <li><a  class="kanji-link" href="https://japanesetest4you.com/category/jlpt-n2/jlpt-n2-kanji-test/" target="_blank">Kanji Tests</a></li>
+                <li><a href="https://www.jlpt.jp/samples/pdf/N2-kanji.pdf" target="_blank">Kanji Practice PDF</a></li>
+                <li><a href="https://jlpt.u-biq.org/2k1.html" target="_blank">Kanji Practice </a></li>
+                <li><a href="https://www.nihongo-pro.com/jp/free-jlpt-n2-quizzes#kanji" target="_blank">Nihongo-Pro Quizzes</a></li>
+                <li><a href="https://www.jpdrills.com/practice/Japanese/42/JLPT_N2_Kanji/Practice" target="_blank">JPDrills Practice</a></li>
+                <li><a href="https://japanesetest4you.com/category/jlpt-n2/jlpt-n2-kanji-test/" target="_blank">Kanji Tests</a></li>
             </ul>
         </div>
 
@@ -62,16 +156,25 @@
             <h3>Kanji Video Lesson</h3>
             <p>Watch this video lesson on JLPT N2 kanji by Japanese Ammo with Misa:</p> 
             <!-- embed the YouTube video using the first resource link -->
-<iframe id="kanjiVideo" width="560" height="315" src="^1^" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="^1^" frameborder="0" allowfullscreen></iframe> 
         </div>
 
+        <!-- Add a button to toggle resources -->
+        <button id="toggle-resources-button">Toggle Resources</button>
     </section>
 
     </main>
 
+    <!-- Add JavaScript for toggling resources -->
+    <script>
+        const toggleResourcesButton = document.getElementById("toggle-resources-button");
+        const resourceList = document.querySelectorAll('.resource ul');
+
+        toggleResourcesButton.addEventListener("click", function () {
+            resourceList.forEach(list => {
+                list.classList.toggle("hide-resources");
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
-
